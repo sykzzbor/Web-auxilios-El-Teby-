@@ -1,0 +1,5 @@
+# El Teby — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.auxilioselteby.com.ar/sitemap.xml
