@@ -2078,4 +2078,219 @@ select {
     }
 }
 
+/* ─── Política de Privacidad ─────────────────── */
+body.privacy-page {
+    line-height: 1.75;
+}
+
+body.privacy-page a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+body.privacy-page a:hover {
+    color: var(--primary-light);
+}
+
+.priv-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 13, 13, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priv-nav-back {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.priv-nav-back:hover {
+    color: var(--text);
+}
+
+.priv-nav-back svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
+}
+
+.priv-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+}
+
+.priv-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.priv-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(255, 107, 0, 0.10);
+    border: 1px solid rgba(255, 107, 0, 0.20);
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.priv-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+}
+
+.priv-date {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.priv-content p {
+    color: rgba(232, 232, 232, 0.75);
+    margin-bottom: 1.25rem;
+}
+
+.priv-content h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.priv-content h2::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: var(--primary);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.priv-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.25rem;
+}
+
+.priv-content ul li {
+    color: rgba(232, 232, 232, 0.75);
+    padding: 0.3rem 0 0.3rem 1.25rem;
+    position: relative;
+}
+
+.priv-content ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 0.85em;
+}
+
+.priv-highlight {
+    background: rgba(255, 107, 0, 0.06);
+    border: 1px solid rgba(255, 107, 0, 0.18);
+    border-radius: var(--r-md);
+    padding: 1.25rem 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.priv-highlight p {
+    margin: 0;
+    font-size: 13.5px;
+    color: rgba(232, 232, 232, 0.65);
+}
+
+.priv-highlight strong {
+    color: var(--text);
+}
+
+.priv-footer {
+    background: var(--dark-2);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.priv-footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.priv-footer-home {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.priv-footer-home:hover {
+    color: var(--primary-light);
+}
+
+/* Enlace privacidad en index */
+.footer-privacy-link {
+    color: var(--text-muted);
+    font-size: var(--fs-xs);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.footer-privacy-link:hover {
+    opacity: 1;
+}
+
+.form-privacy-note {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.form-privacy-note a {
+    color: var(--primary);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.form-privacy-note a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .priv-wrapper { padding: 2.5rem 1.25rem 4rem; }
+    .priv-nav { padding: 0.875rem 1.25rem; }
+    .priv-footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
+}
+
 
