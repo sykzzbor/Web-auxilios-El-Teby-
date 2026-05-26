@@ -1406,7 +1406,38 @@ select {
     text-align: center;
     font-size: var(--fs-xs);
     color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
+
+.footer-dev {
+    margin: 0;
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.footer-dev-link {
+    color: var(--accent, #e8b86d);
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.footer-dev-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.25s ease;
+}
+
+.footer-dev-link:hover { color: #f5d49a; }
+.footer-dev-link:hover::after { width: 100%; }
 
 /* Botón whatsapp */
 .whatsapp-float {
